@@ -1,0 +1,30 @@
+.row {
+    margin-top: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+.card{
+    width: 30rem;
+    display: none;
+    padding: 10px;
+}
+
+body{
+    background-color: #062c33;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
