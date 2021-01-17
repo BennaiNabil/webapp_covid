@@ -9,9 +9,6 @@ function afficher() {
     xhr.addEventListener("readystatechange", function () {
 
         if (this.readyState === this.DONE) {
-            let resultatBrut = JSON.stringify(this.responseText);
-
-
             let obj = JSON.parse(xhr.responseText)[0];
             let codePays = obj["code"];
 
@@ -24,14 +21,14 @@ function afficher() {
             obj["Dernière modification"] = (new Date(obj["lastChange"])).toLocaleString();
             obj["Derniere actualisation"] = (new Date(obj["lastUpdate"])).toLocaleString();
 
-            delete obj["confirmed"];
-            delete obj["country"];
-            delete obj["code"];
-            delete obj["recovered"];
-            delete obj["critical"];
-            delete obj["deaths"];
-            delete obj["lastChange"];
-            delete obj["lastUpdate"];
+            delete obj.confirmed;
+            delete obj.country;
+            delete obj.code;
+            delete obj.recovered;
+            delete obj.critical;
+            delete obj.deaths;
+            delete obj.lastChange;
+            delete obj.lastUpdate;
             delete obj.latitude;
             delete obj.longitude;
 
@@ -46,7 +43,10 @@ function afficher() {
             let cheminDrapeau = `../resources/flags/${codePays.toLowerCase()}.png`;
             let baliseDrapeau = `<img src="${cheminDrapeau}" alt="DRAPEAU" width="100" height="120">`;
 
-            document.getElementById("data").innerHTML = baliseDrapeau + "<br>" + message;
+            let output = baliseDrapeau + "<br>" + message;
+
+            document.getElementById("data").innerHTML = output;
+            return output;
         }
     });
 
