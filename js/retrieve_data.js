@@ -41,7 +41,7 @@ function afficher() {
 
             console.log(codePays);
             let cheminDrapeau = `../resources/flags/${codePays.toLowerCase()}.png`;
-            let baliseDrapeau = `<img src="${cheminDrapeau}" alt="DRAPEAU" width="100" height="120">`;
+            let baliseDrapeau = `<img src="${cheminDrapeau}" alt="DRAPEAU" width="50" height="60">`;
 
             let output = baliseDrapeau + "<br>" + message;
 
