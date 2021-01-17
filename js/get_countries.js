@@ -6,16 +6,11 @@ xhr.withCredentials = true;
 xhr.addEventListener("readystatechange", function () {
     if (this.readyState === this.DONE) {
         let data = JSON.parse(this.responseText);
-        let countries_list = [];
         let formulaire_code = "";
         data.forEach(function (post) {
-            countries_list.push(post.name);
             let currentLine = "<option class=\"all_options\" value=\"" + post.name + "\">" + post.name + "</option>\n";
-            console.log(currentLine);
             formulaire_code+=currentLine;
         })
-        console.log(countries_list);
-        // document.getElementById("countries").innerHTML = countries_list.toString();
         document.getElementById("choix_pays").innerHTML = formulaire_code;
     }
 });
