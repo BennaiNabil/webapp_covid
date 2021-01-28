@@ -8,8 +8,8 @@ xhr.addEventListener("readystatechange", function () {
         let data = JSON.parse(this.responseText);
         let formulaire_code = "";
         data.forEach(function (post) {
-            let currentLine = "<option class=\"all_options\" value=\"" + post.name + "\">" + post.name + "</option>\n";
-            formulaire_code+=currentLine;
+            let currentLine = `<option class="all_options" value="${post.name}">${post.name}</option>`;
+            formulaire_code += currentLine;
         })
         document.getElementById("choix_pays").innerHTML = formulaire_code;
     }
