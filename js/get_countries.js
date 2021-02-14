@@ -1,15 +1,12 @@
-const data = null;
-
-const xhr = new XMLHttpRequest();
+const data = null, xhr = new XMLHttpRequest();
 xhr.withCredentials = true;
 
 xhr.addEventListener("readystatechange", function () {
     if (this.readyState === this.DONE) {
-        let data = JSON.parse(this.responseText);
+        const data = JSON.parse(this.responseText);
         let formulaire_code = "";
-        data.forEach(function (post) {
-            let currentLine = `<option class="all_options" value="${post.name}">${post.name}</option>`;
-            formulaire_code += currentLine;
+        data.forEach(post => {
+            formulaire_code += `<option class="all_options" value="${post.name}">${post.name}</option>`;
         })
         document.getElementById("choix_pays").innerHTML = formulaire_code;
     }
