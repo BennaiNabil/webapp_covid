@@ -23,3 +23,11 @@ body{
 label{
     color: white;
 }
+
+.modif_carte{
+    display: block;
+}
+
+.milieu{
+    margin-bottom: 5em;
+}
