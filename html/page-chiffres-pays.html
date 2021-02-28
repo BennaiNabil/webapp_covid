@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/styleperso.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="jumbotron">
+    <h1 class="display-4">Chiffres d'un pays</h1>
+</div>
+<div class="container-fluid milieu">
+    <div class="row">
+        <div class="col-md-3">
+            <a href="index.html">
+                <button class="btn btn-lg btn-block btn-info" type="button">
+                    Accueil
+                </button>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="./page-chiffres-globaux.html">
+                <button class="btn btn-lg btn-block btn-info" type="button">
+                    Chiffres globaux
+                </button>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="page-chiffres-pays.html">
+
+                <button class="btn btn-lg btn-block btn-info" type="button">
+                    Chiffres d'un pays
+                </button>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="page-detail-pays-par-pays.html">
+                <button class="btn btn-lg btn-block btn-info" type="button">
+                    Détail pays par pays
+                </button>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form id="formulaire">
+                <div class="form-group">
+                    <label for="choix_pays">Sélectionnez votre pays:</label>
+                    <select class="form-control" id="choix_pays" value="France">
+                    </select>
+                </div>
+            </form>
+            <div class="text-center">
+                <button class="btn btn-primary align-content-center my-auto" onclick="afficher()" type="button">Afficher
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col">
+        <div class="row justify-content-center">
+            <div class="card text-center" id="data"></div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/get_countries.js" type="text/javascript"></script>
+<script src="../js/retrieve_data.js"></script>
+
+
+</body>
+</html>
