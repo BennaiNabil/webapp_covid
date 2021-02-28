@@ -36,7 +36,7 @@ function afficher() {
             let message = "";
 
             for (const [key, value] of Object.entries(obj)) {
-                message += (`${key}: ${value}` + "<br>");
+                message += (`${key}: ${value.toLocaleString()}` + "<br>");
             }
 
             console.log(codePays);
